@@ -25,7 +25,7 @@ def tap():
     time.sleep(0.008)
     u32.mouse_event(0x0004, 0, 0, 0, 0)
 
-# attach and resolve client base
+# attach and resolve client bases
 pm = pymem.Pymem(proc_name)
 client_base = pymem.process.module_from_name(pm.process_handle, dll_name).lpBaseOfDll
 
